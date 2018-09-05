@@ -1,0 +1,68 @@
+<!-- Navbar -->
+   <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" [containerInside]="false">
+
+<!-- SideNav slide-out button -->
+                <navlinks class="navbar-container">
+                    <div class="float-left">
+                        <a (click)="onToggleSideNav()" class="button-collapse hidden-nav-button-collapse">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </navlinks>
+
+<!-- Breadcrumb-->
+                <logo>
+
+                    <div class="breadcrumbs breadcrumbs-hidden-nav breadcrumb-dn mr-auto">
+                        <p>Total Examinations for People </p>
+                    </div>
+                </logo>
+
+<!-- 가로 진열하는 각종 navbar menu를 구성하는 영역 -->
+      <navlinks>
+              <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav ie-hidden-double-nav">
+
+
+    <!-- 시험출제자 모드로 로그인 하였을시 활성화 시킨다 -->
+                        <li class="nav-item">
+
+                            <a class="nav-link border border-light rounded waves-light"
+
+                            mdbWavesEffect>
+                                <i class="fa fa-pencil-square-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">Examination</span>
+                            </a>
+                        </li>
+
+    <!-- Contact Navbar 시작 -->
+                        <li  class="nav-item">
+                            <a class="nav-link waves-light" mdbWavesEffect>
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">Contact</span>
+                            </a>
+                        </li>
+
+    <!-- Support Navbar 시작 -->
+                        <li  class="nav-item">
+                            <a class="nav-link waves-light" mdbWavesEffect>
+                                <i class="fa fa-comments-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">Support</span>
+                            </a>
+                        </li>
+    <!-- 사용자 profile dropdopw menu -->
+                        <li class="nav-item dropdown btn-group" dropdown>
+                            <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                                <i class="fa fa-user-circle-o"></i>
+                                사용자 이름
+                            </a>
+                            <div class="dropdown-menu dropdown-primary dropdown-menu-right" role="menu">
+                                <a class="dropdown-item"><i class="fa fa-user-circle-o mr-1"></i>Profile</a>
+                                <a class="dropdown-item"><i class="fa fa-info mr-1"></i>Purchase History</a>
+                                <a class="dropdown-item" [routerLink]="['/auth/logout']"><i class="fa fa-sign-out mr-1"></i>LogOut</a>
+                            </div>
+                        </li>
+              </ul>
+      </navlinks>
+  </mdb-navbar>
+
+
